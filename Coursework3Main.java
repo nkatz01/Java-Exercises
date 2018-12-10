@@ -29,4 +29,17 @@ public class Coursework3Main {
         System.out.println(ac.getPath() + ": " + ac.getSize() + " -> " + ac.getTarget().getPath() + " valid: " + ac.isValidLink());
         System.out.println(abb.getPath() + ": " + abb.getSize() + " -> " + abb.getTarget().getPath() + " valid: " + abb.isValidLink());
     }
+
+/*
+/: 60
+/Users/: 60
+/Users/readme.txt: 20
+/Users/Adele/: 40
+/Users/Adele/playlist.txt: 40
+/Users/music.txt: 0 -> /Users/Adele/playlist.txt valid: true
+/Users/Adele/myHome/: 0 -> /Users/Adele/ valid: true
+/: 20
+/Users/music.txt: 0 -> /Users/Adele/playlist.txt valid: false
+/Users/Adele/myHome/: 0 -> /Users/Adele/ valid: true
+ */
 }
