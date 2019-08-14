@@ -81,7 +81,7 @@ public class Employee
                return chain;         
         }
         
-      /*  public ArrayList<Employee> getCommandChainLoopSol(){
+        public ArrayList<Employee> getCommandChainLoopSol(){
          ArrayList<Employee> commandChainArrList = new  ArrayList<Employee>(); 
         return fillCommandChainByLoop(commandChainArrList);
         
@@ -90,16 +90,26 @@ public class Employee
        
          public ArrayList<Employee> fillCommandChainByLoop(ArrayList<Employee> chain){
         chain.add(this);
-        while (this.getLineManager()!=null){
-            
-           this.getLineManager().fillCommandChain(chain);
+        Employee current = this.getLineManager();
+        while (current!=null){
+           chain.add(current);
+           current = current.getLineManager();
+           
         }
+             
+             /* Employee theirManager = this;
+        chain.add(theirManager);
+        while (theirManager.getLineManager()!=null){
+           theirManager = theirManager.getLineManager();
+           chain.add(theirManager.getLineManager());
+           
+        }*/
            
                return chain;         
         }
-        */
+        
         
      
-    }
+}
     
 
