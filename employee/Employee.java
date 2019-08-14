@@ -22,14 +22,16 @@ public class Employee
         this.name=name; 
         this.lineManager=lineManager;
     }
-     public Employee(String name)
+
+    public Employee(String name)
     {
         // initialise instance variables
         this(name, null);
     }
+
     public Employee getLineManager(){
-     
-    return this.lineManager;
+
+        return this.lineManager;
     }       
 
     /**
@@ -42,74 +44,63 @@ public class Employee
     public String toString()
     {
         // put your code here
-         return this.name; 
+        return this.name; 
     }
-    
-     public Employee getCEO(){
+
+    public Employee getCEO(){
         if (this.getLineManager()==null){
-        Employee CE0 = new Employee(this.toString()); 
-        return CE0;
-    }
-      else 
-         return getLineManager().getCEO();
-         
-    } 
-    
-    public Employee getCEOLoop(){
-         Employee CEO = new  Employee(this.toString(), this.getLineManager());
-        while(CEO.getLineManager()!=null){
-           
-          CEO = CEO.getLineManager();
+            Employee CE0 = new Employee(this.toString()); 
+            return CE0;
         }
-     
+        else 
+            return getLineManager().getCEO();
+
+    } 
+
+    public Employee getCEOLoop(){
+        Employee CEO = new  Employee(this.toString(), this.getLineManager());
+        while(CEO.getLineManager()!=null){
+
+            CEO = CEO.getLineManager();
+        }
+
         return CEO;
-        
+
     }
-    
+
     public ArrayList<Employee> getCommandChain(){
-         ArrayList<Employee> commandChainArrList = new  ArrayList<Employee>(); 
+        ArrayList<Employee> commandChainArrList = new  ArrayList<Employee>(); 
         return fillCommandChain(commandChainArrList);
-        
+
     }
+
     public ArrayList<Employee> fillCommandChain(ArrayList<Employee> chain){
         chain.add(this);
         if (this.getLineManager()!=null){
-            
-           this.getLineManager().fillCommandChain(chain);
+
+            this.getLineManager().fillCommandChain(chain);
         }
-           
-               return chain;         
-        }
-        
-        public ArrayList<Employee> getCommandChainLoopSol(){
-         ArrayList<Employee> commandChainArrList = new  ArrayList<Employee>(); 
-        return fillCommandChainByLoop(commandChainArrList);
-        
+
+        return chain;         
     }
-        
-       
-         public ArrayList<Employee> fillCommandChainByLoop(ArrayList<Employee> chain){
+
+    public ArrayList<Employee> getCommandChainLoopSol(){
+        ArrayList<Employee> commandChainArrList = new  ArrayList<Employee>(); 
+        return fillCommandChainByLoop(commandChainArrList);
+
+    }
+
+    public ArrayList<Employee> fillCommandChainByLoop(ArrayList<Employee> chain){
         chain.add(this);
         Employee current = this.getLineManager();
         while (current!=null){
-           chain.add(current);
-           current = current.getLineManager();
-           
+            chain.add(current);
+            current = current.getLineManager();
+
         }
-             
-             /* Employee theirManager = this;
-        chain.add(theirManager);
-        while (theirManager.getLineManager()!=null){
-           theirManager = theirManager.getLineManager();
-           chain.add(theirManager.getLineManager());
-           
-        }*/
-           
-               return chain;         
-        }
-        
-        
+        return chain;         
+    }
+
      
 }
-    
 
