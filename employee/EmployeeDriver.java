@@ -20,8 +20,8 @@ public class EmployeeDriver
  
       
      // System.out.println(barry.getCEO());
-    // System.out.println(barry.getCEOLoop());
-     System.out.println(barry.getCommandChain());
+      System.out.println(barry.getCEOLoop());
+     //System.out.println(barry.getCommandChain());
      
     }
 }

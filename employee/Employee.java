@@ -28,7 +28,7 @@ public class Employee
         this(name, null);
     }
     public Employee getLineManager(){
-      //  System.out.println(this.lineManager==null);
+     
     return this.lineManager;
     }       
 
@@ -56,11 +56,13 @@ public class Employee
     } 
     
     public Employee getCEOLoop(){
-        while (this.getLineManager()!=null){
-            return getLineManager().getCEOLoop();
-        } 
-         Employee CE0 = new Employee(this.toString());
-        return CE0;
+         Employee CEO = new  Employee(this.toString(), this.getLineManager());
+        while(CEO.getLineManager()!=null){
+           
+          CEO = CEO.getLineManager();
+        }
+     
+        return CEO;
         
     }
     
@@ -79,6 +81,23 @@ public class Employee
                return chain;         
         }
         
+      /*  public ArrayList<Employee> getCommandChainLoopSol(){
+         ArrayList<Employee> commandChainArrList = new  ArrayList<Employee>(); 
+        return fillCommandChainByLoop(commandChainArrList);
+        
+    }
+        
+       
+         public ArrayList<Employee> fillCommandChainByLoop(ArrayList<Employee> chain){
+        chain.add(this);
+        while (this.getLineManager()!=null){
+            
+           this.getLineManager().fillCommandChain(chain);
+        }
+           
+               return chain;         
+        }
+        */
         
      
     }
