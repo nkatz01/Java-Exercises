@@ -26,6 +26,13 @@ public class IntConstant implements Expression {
         return this.value;
     }
 
+   public int numberOfNodes(){
+    return 1; 
+    } 
+    
+    public int computeValue(){
+        return this.getValue(); 
+    }
 
     @Override
     public String toString() {

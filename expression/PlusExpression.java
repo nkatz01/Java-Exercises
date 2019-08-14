@@ -16,5 +16,9 @@ public class PlusExpression extends BinaryExpression {
     public PlusExpression(Expression left, Expression right) {
         super(left, right, "+");
     }
+    
+    public int  computeValue(){
+        return (getLeft().computeValue() + getRight().computeValue()); 
+    }
 
 }

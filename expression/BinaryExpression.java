@@ -58,6 +58,18 @@ public abstract class BinaryExpression implements Expression {
     public String getOperatorSymbol() {
         return this.operatorSymbol;
     }
+    public int numberOfNodes(){
+    return 2; 
+    } 
+    
+   /* public int computeValue(){
+       // int leftExp = new IntConstant(this.left);
+       // int rightExp = new IntConstant(this.left);
+           
+             
+          String operator = this.getOperatorSymbol().toString();
+         return  compute(this.left = left,  this.right = right);
+    }*/
 
 
     @Override

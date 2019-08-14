@@ -16,5 +16,9 @@ public class TimesExpression extends BinaryExpression {
     public TimesExpression(Expression left, Expression right) {
         super(left, right, "*");
     }
+    
+    public int  computeValue(){
+        return (getLeft().computeValue() * getRight().computeValue()); 
+    }
 
 }
