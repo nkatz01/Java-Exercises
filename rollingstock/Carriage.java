@@ -7,7 +7,7 @@ package rollingstock;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Carriage extends RollRailStock
+public class Carriage extends RailVehicle  implements RollRailStock
 {
     // instance variables - replace the example below with your own
    private int numOfSeats;

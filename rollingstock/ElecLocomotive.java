@@ -10,12 +10,12 @@ package rollingstock;
 public class ElecLocomotive extends Locomotive 
 {
     // instance variables - replace the example below with your own
-    private double volts;
+    private long volts;
 
     /**
      * Constructor for objects of class ElecLocomotive
      */
-    public ElecLocomotive(int trackGauge, int KW, double volts)
+    public ElecLocomotive(int trackGauge, int KW, long volts)
     {
         // initialise instance variables
         super(trackGauge, KW); 
@@ -28,7 +28,7 @@ public class ElecLocomotive extends Locomotive
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public double getVoltage()
+    public long getVoltage()
     {
         // put your code here
         return  this.volts;

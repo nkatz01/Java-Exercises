@@ -11,7 +11,7 @@ public abstract class Locomotive<T extends RollRailStock>  extends PoweredRollRa
 {
     // instance variables - replace the example below with your own
      
-    private int KW; 
+    
     /**
      * An example of a method - replace this comment with your own
      *
@@ -24,6 +24,8 @@ public abstract class Locomotive<T extends RollRailStock>  extends PoweredRollRa
        super(trackGauge, KW); 
        
     }
+    
+
     
     
 }

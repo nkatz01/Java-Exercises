@@ -7,7 +7,7 @@ package rollingstock;
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class PoweredRollRailStock extends RollRailStock
+public abstract class PoweredRollRailStock extends RailVehicle implements RollRailStock
 {
     // instance variables - replace the example below with your own
     private int KW;

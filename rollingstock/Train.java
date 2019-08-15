@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Train extends RollRailStock
+public class Train  implements RollRailStock
 {
     // instance variables - replace the example below with your own
     private Locomotive locomotive; 
@@ -15,10 +15,10 @@ public class Train extends RollRailStock
     /**
      * Constructor for objects of class Train
      */
-    public Train(int trackGauge, Locomotive locomotive, ArrayList carriages )
+    public Train(Locomotive locomotive, ArrayList carriages )
     {
         // initialise instance variables
-       super( trackGauge); 
+         
        this.locomotive=locomotive; 
        this.carriages=carriages; 
     }
@@ -39,5 +39,13 @@ public class Train extends RollRailStock
     {
         // put your code here
         return carriages;
+    }
+    
+    public int getTrackGauge(){
+    return locomotive.getTrackGauge();
+    }
+    
+    public int getKW(){
+         return locomotive.getKW();
     }
 }
