@@ -20,5 +20,9 @@ public class PlusExpression extends BinaryExpression {
     public int  computeValue(){
         return (getLeft().computeValue() + getRight().computeValue()); 
     }
+    
+     public int numberOfNodes(){
+    return 2; 
+    } 
 
 }

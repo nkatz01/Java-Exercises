@@ -20,5 +20,9 @@ public class TimesExpression extends BinaryExpression {
     public int  computeValue(){
         return (getLeft().computeValue() * getRight().computeValue()); 
     }
+     public int numberOfNodes(){
+       return (getLeft().numberOfNodes() + getRight().numberOfNodes());   
+    } 
+     
 
 }

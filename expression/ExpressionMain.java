@@ -23,8 +23,8 @@ public class ExpressionMain {
         Expression[] exps = { e1, e2, e5, e6, plus, times, bigTimes };
 
         for (Expression exp : exps) {
-             System.out.println(" nodes and value " + exp.computeValue());
-            // exp + " has " + exp.numberOfNodes()                + 
+             System.out.println(exp + " has " + exp.numberOfNodes() + " nodes and value " + exp.computeValue());
+            //                + 
         }
     }
 }
