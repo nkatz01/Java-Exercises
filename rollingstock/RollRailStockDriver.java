@@ -1,6 +1,6 @@
  package rollingstock;
 import java.util.ArrayList;
-
+import java.util.Arrays; 
  
 public class RollRailStockDriver
 {
@@ -15,13 +15,13 @@ public class RollRailStockDriver
      Carriage carriage3 = new Carriage(1000, 10); //2nd param no of seats
       
      
-     ArrayList<Carriage> twoCarriages = new ArrayList<Carriage>();
-     twoCarriages.add(carriage1);
-     twoCarriages.add(carriage2);
-     Train train1 = new Train(steamlocomotive,twoCarriages ); 
+     ArrayList<Carriage> twoCarriages = new ArrayList<Carriage>(Arrays.asList(carriage1,carriage2));
+    // twoCarriages.add(carriage1);
+    // twoCarriages.add(carriage2);
+     Train train1 = new Train(steamlocomotive,twoCarriages); 
      
-     ArrayList<Carriage> oneCarriages = new ArrayList<Carriage>();
-     twoCarriages.add(carriage3);
+     ArrayList<Carriage> oneCarriages = new ArrayList<Carriage>(Arrays.asList(carriage3));
+     //twoCarriages.add();
     Train train2 = new Train(eletctricLocomotive,oneCarriages );  
     
     System.out.println(train1.getTrackGauge() +", "+ train1.getKW());
