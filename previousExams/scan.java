@@ -13,14 +13,22 @@ public static void main(String[] args){
     Scanner scn = new Scanner(System.in);
     int sum = 0;
     int times=0;
-    
-    do{
-    System.out.println("Please enter integer"); 
-    int i = scn.nextInt();
+      int i;
+      System.out.println("Please enter integer"); 
+  do {
+     
+   
+     if (scn.hasNextInt()){
+     
+    i = scn.nextInt();
     sum+=i;
-    times++;
-} while (scn.hasNextInt()) ;
-    
+    times++;}
+    else
+    break;
+   // if (times==1)
+    //System.out.println(scn.hasNextInt()==false); 
+  System.out.println("Please enter integer"); 
+   }   while (scn.hasNext()); 
     System.out.println(sum + " " + times); 
 }
  
