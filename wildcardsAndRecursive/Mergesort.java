@@ -12,15 +12,16 @@ import java.util.*;
 public class Mergesort
 {
     // instance variables - replace the example below with your own
-    private ArrayList<Integer> arr;
-    private ArrayList<Integer> sortedArr;
+    private int[] arr ;
+    private int[] oddArr;
+    private int[] sortedArr;
     private int length; 
     /**
      * Constructor for objects of class mergeSorty
      */
     public Mergesort()
     {
-        arr = new ArrayList<Integer>(Arrays.asList(100, 8, 4, 13, 99, 23, 17 ,7, 25 )); 
+        arr = new int[] {1, 8, 4, 13, 99, 23, 17 ,7, 25 ,5}; 
         sortedArr = new ArrayList<Integer>(); 
        length = arr.size();
       // System.out.println(length);
