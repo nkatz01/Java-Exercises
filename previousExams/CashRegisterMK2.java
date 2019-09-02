@@ -31,7 +31,7 @@ public class CashRegisterMK2
            // for (int i=0; i<n; i++){
            Iterator<Double> iter = items.iterator(); 
            while (iter.hasNext()){
-           Double item =iter.next();
+            iter.next();
             iter.remove(); }
         
     }
