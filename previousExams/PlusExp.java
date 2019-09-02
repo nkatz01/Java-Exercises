@@ -34,7 +34,7 @@ return "("+left.toString()+" + "+right.toString()+")";
 public ArrayList<Var> getVars(){
     ArrayList<Var> LL = left.getVars(); 
     ArrayList<Var> RL = right.getVars();
-    ArrayList<Var> NL = new ArrayList<Var>(); 
+   /* ArrayList<Var> NL = new ArrayList<Var>(); 
     for (Var var: LL){
     if (var!=null && !(LL.contains(var)))
         NL.add(var);
@@ -42,8 +42,26 @@ public ArrayList<Var> getVars(){
      for (Var var: RL){
     if (var!=null && !(LL.contains(var)))
         NL.add(var);
+    }*/
+      ArrayList<Var> NL =   new ArrayList<Var>(); 
+      LL.add(left.getVars().get(0));
+       RL.add(right.getVars().get(0));
+        for (Var var: LL){
+            if (var!=null & !NL.contains(var))
+        NL.add(var);
     }
+     for (Var var: RL){
+          if (var!=null && !NL.contains(var))
+         NL.add(var);
+    }
+      
+
+   // System.out.println(NL);
     return NL; 
+}
+
+public int evaluate(Assignment a){
+return left.evaluate(a) + right.evaluate(a); 
 }
 
 }

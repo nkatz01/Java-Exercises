@@ -18,5 +18,6 @@ public interface Exp
      */
   public Exp replace(Var var, Exp val);
  public ArrayList<Var> getVars();
+  public int evaluate(Assignment a);
 
 }

@@ -34,4 +34,8 @@ public ArrayList<Var> getVars(){
    return cl; 
 } 
 
+public int evaluate(Assignment a){
+return value; 
+}
+
 }

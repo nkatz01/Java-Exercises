@@ -26,11 +26,13 @@ return name+"";
 }
 
 public ArrayList<Var> getVars(){
-   // ArrayList<Var> vl = new ArrayList<Var>(); 
-   // vl.add(this);
-   // return vl;
+    
    return new ArrayList<Var>(Arrays.asList(this));
 } 
+
+public int evaluate(Assignment a){
+return a.getValue(name); 
+}
  
 }
  
