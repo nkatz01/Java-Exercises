@@ -14,7 +14,8 @@ public class CashRDriver
     reg1.addItem(2.95);
     reg1.addItem(1.99);
     System.out.println(reg1.getCount() + " items, total " + reg1.getTotal());
-    reg1.clear();
+    //reg1.clear();
+    reg1.clear2();
     System.out.println(reg1.getCount() + " items, total " + reg1.getTotal());
     
     }

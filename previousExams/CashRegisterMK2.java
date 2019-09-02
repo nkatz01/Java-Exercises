@@ -26,13 +26,17 @@ public class CashRegisterMK2
     }
     
     public void clear(){
-      // int n = items.size(); 
-        //for (Double item: items){
-           // for (int i=0; i<n; i++){
+       
            Iterator<Double> iter = items.iterator(); 
            while (iter.hasNext()){
             iter.next();
             iter.remove(); }
+        
+    }
+    
+     public void clear2(){
+       
+          items = new ArrayList<Double>();
         
     }
     
