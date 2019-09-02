@@ -1,5 +1,6 @@
 package previousExams;
-
+import java.util.ArrayList; 
+import java.util.Arrays;
 
 /**
  * Write a description of class PlustExpression here.
@@ -28,6 +29,21 @@ return pex;
 @Override
 public String toString(){
 return "("+left.toString()+" + "+right.toString()+")";
+}
+
+public ArrayList<Var> getVars(){
+    ArrayList<Var> LL = left.getVars(); 
+    ArrayList<Var> RL = right.getVars();
+    ArrayList<Var> NL = new ArrayList<Var>(); 
+    for (Var var: LL){
+    if (var!=null && !(LL.contains(var)))
+        NL.add(var);
+    }
+     for (Var var: RL){
+    if (var!=null && !(LL.contains(var)))
+        NL.add(var);
+    }
+    return NL; 
 }
 
 }

@@ -1,5 +1,6 @@
 package previousExams;
-
+import java.util.ArrayList; 
+import java.util.Arrays; 
 
 /**
  * Write a description of class Constant here.
@@ -25,5 +26,12 @@ return this;
 public String toString(){
 return value+"";
 }
+
+public ArrayList<Var> getVars(){
+    //return new ArrayList<Var>(Arrays.asList(null));
+     ArrayList<Var> cl = new ArrayList<Var>();
+   cl.add(null); 
+   return cl; 
+} 
 
 }

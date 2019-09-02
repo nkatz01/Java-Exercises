@@ -1,5 +1,5 @@
 package previousExams;
-
+import java.util.Arrays;
 
 /**
  * Write a description of class ExpDriver here.
@@ -17,7 +17,7 @@ public class ExpDriver
     
      Exp f = e.replace(x, new Constant(7));
      System.out.println(f.toString());
-
+     System.out.println(  f.getVars()  );
 
 }
 

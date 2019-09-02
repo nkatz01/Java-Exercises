@@ -17,6 +17,6 @@ public interface Exp
      * @return   the result produced by sampleMethod
      */
   public Exp replace(Var var, Exp val);
-//public ArrayList<Var> getVars();
+ public ArrayList<Var> getVars();
 
 }

@@ -1,6 +1,6 @@
 package previousExams;
-
-
+import java.util.ArrayList;
+import java.util.Arrays;
 /**
  * Write a description of class Var here.
  *
@@ -24,6 +24,13 @@ return this;
 public String toString(){
 return name+"";
 }
+
+public ArrayList<Var> getVars(){
+   // ArrayList<Var> vl = new ArrayList<Var>(); 
+   // vl.add(this);
+   // return vl;
+   return new ArrayList<Var>(Arrays.asList(this));
+} 
  
 }
  
