@@ -24,8 +24,31 @@ public class PersonDriver
         Person jimNameNull = new Person(null); 
         Person mark = new Person("mark"); 
         Angel matatron = new Angel(); 
+        
+        
+        
+         
+        
+        Employee berl2 = new Employee("berl", 16000);
+        Employee berl3 = new Employee("berl", 16000);       
+        Employee berl7 = new Employee(null, 16000);
+        Employee berl8 = new Employee(null, 16000);
+       
+        Employee berl9 = new Employee("berl", 16000);
+        Employee berl10 = new Employee("mark", 16000);
+        
+      Employee berl = new Employee(null, 14000);   
+      Employee berl4 = new Employee(null, 16000);
+      
+      Employee berl6 = new Employee(null, 14000);
+      Employee berl1 = new Employee("berl", 14000);
+      
+     
+      
+        Employee betzalel = null; 
         System.out.println(""); 
-        System.out.println(jim2.equals(mark)); 
+       // System.out.println(jim2.equals(mark)); 
+        System.out.println(berl10.equals(mark)); 
     }
 
     /**
