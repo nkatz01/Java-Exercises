@@ -9,8 +9,37 @@ public class scan{
  * @version (a version number or a date)
  */
 public static void main(String[] args){
+//sum();
+ System.out.println(scan());
+}
+ 
+public static int scan(){
+    System.out.println("Please enter integer; "+"a non-integer to terminate; "+ "0 for a count of positive integers entered");
+    Scanner scan = new Scanner(System.in); 
+    int i = 0; 
+    int times = 0; 
+    while( scan.hasNextInt()){
+        
+        i=scan.nextInt();
+          
+        if (i>0)
+        times++;
+        if (i==0)
+        break;
+         
+    }
+    if (i==0)
+    return times; 
+     else
+     return -1; 
+    }
+ 
 
-    Scanner scn = new Scanner(System.in);
+
+
+public static void sum(){
+
+     Scanner scn = new Scanner(System.in);
     int sum = 0;
     int times=0;
       int i;
@@ -31,5 +60,4 @@ public static void main(String[] args){
    }   while (scn.hasNext()); 
     System.out.println(sum + " " + times); 
 }
- 
 }
