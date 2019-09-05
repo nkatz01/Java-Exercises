@@ -28,5 +28,6 @@ public class TreeDr
    Tree mirEighteen = mirFortyTwo.getLeft(); 
   System.out.println(mirFortyTwo.getRight().value);
    System.out.println(mirEighteen.getRight().value);
+     // System.out.println(mirEighteen.test());
     }
 }

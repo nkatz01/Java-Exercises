@@ -57,12 +57,12 @@ public  ArrayList<Integer> asList(){
     return new Tree( right.getMirrored() , left.getMirrored() , value);
         
         
-    } 
-/*public int deleteLeavesWith(int val){
+   } /* 
+ public int deleteLeavesWith(int val){
     if (right==null & left == null){
-    if (value == val)
-   return this.value;
-   if left.deleteLeavesWith(val) == val
+    
+   return 0;
+   if   
 }
         
 }*/
@@ -71,7 +71,8 @@ public Tree getRight(){
 
 return right; 
 }
-
+ 
+ 
 public Tree getLeft(){
 
 return left; 
