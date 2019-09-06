@@ -16,10 +16,13 @@ public class TreeDr
     Tree fortyTwo = new Tree(three, eighteen, 42); 
     Tree minusEight = new Tree(null, null, -8); 
     Tree rootFifteen = new Tree(fortyTwo, minusEight, 15);
-   // System.out.println(minusEight.getLeft().value);
+    System.out.println(eighteen.getLeft().value);
    // System.out.println(minusEight.getRight().value);
      System.out.println(rootFifteen.asList()); 
-     Tree treeMirrored = rootFifteen.getMirrored(); 
+     System.out.println(rootFifteen.deleteLeavesWith(-1));
+     System.out.println(rootFifteen.asList()); 
+   //  System.out.println(eighteen.getLeft().value);
+  /*   Tree treeMirrored = rootFifteen.getMirrored(); 
      System.out.println(treeMirrored.asList());
       System.out.println(treeMirrored.getLeft().value);
    System.out.println(treeMirrored.getRight().value);
@@ -28,6 +31,7 @@ public class TreeDr
    Tree mirEighteen = mirFortyTwo.getLeft(); 
   System.out.println(mirFortyTwo.getRight().value);
    System.out.println(mirEighteen.getRight().value);
-     // System.out.println(mirEighteen.test());
+    System.out.println(mirEighteen.getRight().value);
+       */
     }
 }

@@ -57,15 +57,58 @@ public  ArrayList<Integer> asList(){
     return new Tree( right.getMirrored() , left.getMirrored() , value);
         
         
-   } /* 
+   }  
  public int deleteLeavesWith(int val){
-    if (right==null & left == null){
-    
-   return 0;
-   if   
+     Tree treeLeft; 
+     Tree treeRight; 
+     int num=0; 
+     if (left==null && right==null)
+     return 0; 
+     else{
+        if (left!=null && right==null){
+            treeLeft=left; 
+            if (treeLeft.left==null && treeLeft.right==null){
+                if (treeLeft.value == val){
+                left=null; 
+                num+=1; }
+            }
+            else{
+                if (treeLeft.left!=null && treeLeft.right==null)
+                    num+= treeLeft.left.deleteLeavesWith(val);
+                else if (treeLeft.left==null && treeLeft.right!=null)
+                    num+= treeLeft.right.deleteLeavesWith(val);
+                else num+= treeLeft.left.deleteLeavesWith(val)+treeLeft.right.deleteLeavesWith(val);
+            
+            
+            }
+        }
+        else if (left==null && right!=null){
+            treeRight=right; 
+            if (treeRight.left==null && treeRight.right==null)
+            {
+                if (treeRight.value==val){
+                    right=null;
+                    num+=1; 
+                }
+            }
+            else{
+                if(treeRight.left!=null && treeRight.right==null)
+                    num+= treeRight.left.deleteLeavesWith(val);
+                else if (treeRight.left==null && treeRight.right!=null)
+                       num+= treeRight.right.deleteLeavesWith(val);
+                else num+= treeRight.left.deleteLeavesWith(val) + treeRight.right.deleteLeavesWith(val); 
+            
+            }
+        }
+        else num+= left.deleteLeavesWith(val) + right.deleteLeavesWith(val); 
+        
+            
+        
+     }
+     return num;
 }
         
-}*/
+ 
 
 public Tree getRight(){
 
