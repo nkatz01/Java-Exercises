@@ -63,10 +63,10 @@ $array= mergeSort(--$length,$array);
 
  function mergeSort($length, $array){
 	  
-	if($length>=1){
+	if($length<1){
 		return merge($array);  
 	}
-$array= mergeSort(($length/2),$array);
+$array= mergeSort($length/2,$array);
 	 
 	$array= merge($array);
 	 return $array;
