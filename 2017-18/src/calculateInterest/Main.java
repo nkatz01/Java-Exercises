@@ -26,6 +26,8 @@ class Main //IC4 (interestCalculator4)
         }
         System.out.printf("Starting with an initial balance of £%.2f, your balance will have more than doubled - to £%.2f by %d years, and of which £%.2f is the interest earned at a rate of 5%%\n",
                 initialBalance, currentBalance, years,  interestAccumulated);
+
+        interestOnSavingYears();
     }
 
     public static double interestOn(double balance)
@@ -33,6 +35,25 @@ class Main //IC4 (interestCalculator4)
         double interest = balance * 0.05;
         return interest;
 
+    }
+
+    public static void interestOnSavingYears()
+    {
+        double initialBalance = 10000;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Please enter saving years");
+        int savingYears = scan.nextInt();
+
+        System.out.println("The initial balance is £" + initialBalance);
+
+        double currentBalance=initialBalance;
+        double interestAccumulated=0;
+        for (int i=1; i<=savingYears; i++){
+            interestAccumulated= interestOn(currentBalance);
+            currentBalance=currentBalance+interestAccumulated;
+            System.out.printf("Year %d balance is £%.2f interest earned is £%.2f\n", savingYears, currentBalance, interestAccumulated);
+        }
     }
 
 }
